@@ -1,3 +1,10 @@
+#include <stddef.h> // C++ 11 requires this so we can use NULL
+
+#ifndef __STACK__
+
+#define __STACK__
+#define default_size 10
+
 template <typename E> class Stack {
 private:
 	void operator =(const Stack&) {} // this protects assignment
@@ -26,3 +33,4 @@ public:
 	virtual int length() const = 0;
 };
 
+#endif
